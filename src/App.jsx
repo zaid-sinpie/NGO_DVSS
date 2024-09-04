@@ -6,12 +6,12 @@ import About from "./components/About.jsx";
 
 function App() {
   return (
-    <main className="overflow-x-hidden flex flex-col">
+    <main className="flex flex-col">
       {<Header />}
       {<Head />}
       {<Programs />}
       {<Community />}
-      {<About />}
+      {/* {<About />} */}
     </main>
   );
 }

@@ -9,39 +9,27 @@ import img6 from "../assets/img6.png";
 import Links from "./Links";
 
 const Head = () => {
+  const images = [
+    { src: img1, text: "bg sliding img 1" },
+    { src: img2, text: "bg sliding img 2" },
+    { src: img3, text: "bg sliding img 3" },
+    { src: img4, text: "bg sliding img 4" },
+    { src: img5, text: "bg sliding img 5" },
+    { src: img6, text: "bg sliding img 6" },
+  ];
+
+  const imagesWithLoop = [...images, img1];
   return (
-    <section className="w-screen h-screen bg-[#363636] overflow-hidden max-sm:h-auto max-lg:h-auto max-xl:h-auto">
-      <div className="flex max-sm:pt-[2rem]">
-        <img
-          src={img1}
-          alt="bg sliding img 1"
-          className="w-full h-full animate-slide-images"
-        />
-        <img
-          src={img2}
-          alt="bg sliding img 2"
-          className="w-full h-full animate-slide-images"
-        />
-        <img
-          src={img3}
-          alt="bg sliding img 3"
-          className="w-full h-full animate-slide-images"
-        />
-        <img
-          src={img4}
-          alt="bg sliding img 4"
-          className="w-full h-full animate-slide-images"
-        />
-        <img
-          src={img5}
-          alt="bg sliding img 5"
-          className="w-full h-full animate-slide-images"
-        />
-        <img
-          src={img6}
-          alt="bg sliding img 6"
-          className="w-full h-full animate-slide-images"
-        />
+    <section className="h-screen bg-[#363636] overflow-hidden max-sm:h-auto max-lg:h-auto max-xl:h-auto">
+      <div className="flex max-sm:pt-[2rem] animate-slide-images">
+      {imagesWithLoop.map((img, idx) => (
+          <img
+            key={idx}
+            src={img.src}
+            alt={img.text}
+            className="w-1/7 h-full"
+          />
+        ))}
       </div>
       <Links />
     </section>

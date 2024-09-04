@@ -5,22 +5,17 @@ export default {
     extend: {
       keyframes: {
         slideImages: {
-          "0%, 8.33%": { transform: "translateX(0)" },
-          "16.66%, 25%": { transform: "translateX(-100%)" },
-          "33.33%, 41.66%": { transform: "translateX(-200%)" },
-          "50%, 58.33%": { transform: "translateX(-300%)" },
-          "66.66%, 75%": { transform: "translateX(-400%)" },
-          "83.33%, 91.66%": { transform: "translateX(-500%)" },
-          "100%": { transform: "translateX(0%)" },
-        },
-        slideTopIn: {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(0%)' },
+          "0%, 10%": { transform: "translateX(0)" },
+          "15%, 25%": { transform: "translateX(-100%)" },
+          "30%, 40%": { transform: "translateX(-200%)" },
+          "45%, 55%": { transform: "translateX(-300%)" },
+          "60%, 70%": { transform: "translateX(-400%)" },
+          "75%, 85%": { transform: "translateX(-500%)" },
+          "90%, 100%": { transform: "translateX(-500%)" }, // Slide out the 6th image
         },
       },
       animation: {
-        "slide-images": "slideImages 60s infinite linear",
-        slideTopIn: 'slideTopIn 1s forwards',
+        "slide-images": "slideImages 72s infinite ease-in-out", // Adjusted duration to account for the pauses
       },
     },
   },

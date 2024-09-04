@@ -16,7 +16,7 @@ const Header = () => {
   }
 
   return (
-    <header className="w-full bg-[#e3e3e349] max-sm:bg-[#acacac] backdrop-blur-md py-3 max-sm:py-1 px-5 flex justify-between items-center fixed top-0 left-0 text-stone-100 z-50 animate-slideTopIn">
+    <header className="w-full bg-[#e3e3e349] backdrop-blur-md py-3 max-sm:py-1 px-5 flex justify-between items-center fixed top-0 left-0 text-stone-100 z-50 animate-slideTopIn">
       <div className="cursor-pointer">
         <img
           src={img}
@@ -24,7 +24,7 @@ const Header = () => {
           className="w-[3.5rem] max-sm:w-[2rem]"
         />
       </div>
-      <nav className="flex justify-around gap-8 font-semibold uppercase max-sm:hidden max-lg:hidden max-xl:hidden">
+      <nav className="flex justify-around gap-8 font-semibold uppercase max-sm:hidden max-lg:hidden max-xl:hidden ">
         <a href="#" className={linksCss}>
           home
         </a>
